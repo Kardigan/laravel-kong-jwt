@@ -11,7 +11,7 @@
     "authors": [
         {
             "name": "Kristian Lunde",
-            "email": "kristian@kardigan.no"
+            "email": "opensource@kardigan.no"
         }
     ],
     "autoload-dev": {
