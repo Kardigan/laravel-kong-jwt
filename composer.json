@@ -19,7 +19,7 @@
             "email": "opensource@kardigan.no"
         }
     ],
-    "autoload-dev": {
+    "autoload": {
       "psr-4": {
         "Kardigan\\LaravelKongJwt\\": "src/"
       }
