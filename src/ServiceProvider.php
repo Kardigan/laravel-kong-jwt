@@ -13,7 +13,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         $router->aliasMiddleware(
             'kongjwt',
-            'Brandsafe\LaravelKongJwt\KongJwtMiddleware'
+            'Kardigan\LaravelKongJwt\KongJwtMiddleware'
         );
     }
 }
