@@ -1,7 +1,10 @@
 # Laravel Kong JWT
 
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+
 Package to read JWT claims sent through the JWT
-plugin in Kong ((http://getkong.org)) to the upstream api. 
+plugin in Kong ((http://getkong.org)) to the upstream api.
 
 It adds a middleware that pulls out all claims and
 add them to the config under the key "claims".
