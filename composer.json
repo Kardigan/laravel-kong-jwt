@@ -6,6 +6,7 @@
         "firebase/php-jwt": "^4.0",
         "phpunit/phpunit": "^6.1"
     },
+    "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
