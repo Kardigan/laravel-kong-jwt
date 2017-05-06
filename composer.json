@@ -1,0 +1,21 @@
+{
+    "name": "kardigan/laravel-kong-jwt",
+    "description": "Middleware to add kong jwt claims to laravels config",
+    "type": "library",
+    "require": {
+        "firebase/php-jwt": "^4.0",
+        "phpunit/phpunit": "^6.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kristian Lunde",
+            "email": "kristian@kardigan.no"
+        }
+    ],
+    "autoload-dev": {
+      "psr-4": {
+        "Kardigan\\LaravelKongJwt\\": "src/"
+      }
+    }
+}
