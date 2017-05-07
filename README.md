@@ -25,6 +25,8 @@ Add the middleware to app/Http/Kernel.php or set dynamically in your routes.
 
 ## Usage
 
+If the x-consumer-custom-id is not set the middleware will return a 403 access denied.
+
 Once the middleware is up and running you can access
 all claims sent through with the JWT token like this:
 

@@ -15,6 +15,11 @@ class KongJwtMiddleware
      */
     public function handle($request, Closure $next, $guard = null)
     {
+        if($request->hasHeader('x-consumer-custom-id'))
+        {
+          abort(403, 'Access denied');
+        }
+
         if($request->hasHeader('authorization'))
         {
             $jwt = new Jwt();
