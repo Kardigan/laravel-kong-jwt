@@ -15,7 +15,16 @@ class KongJwtMiddleware
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if(!$request->hasHeader('x-consumer-custom-id'))
+        $enabled = env('LARAVEL_KONG_JWT_ENABLED', true);
+		
+		if(!$enabled)
+		{
+			return $next($request);
+		}
+		
+		
+		
+		if(!$request->hasHeader('x-consumer-custom-id'))
         {
           abort(403, 'Access denied');
         }
