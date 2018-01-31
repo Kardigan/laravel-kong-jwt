@@ -33,3 +33,5 @@ all claims sent through with the JWT token like this:
 ```php
 Config::get('claims');
 ```
+
+The middleware are checking for a jwt token both in the header with the "authorization" key, or as a url parameter with the "token" key

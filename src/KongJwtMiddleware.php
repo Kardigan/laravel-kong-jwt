@@ -29,11 +29,16 @@ class KongJwtMiddleware
           abort(403, 'Access denied');
         }
 
-        if($request->hasHeader('authorization'))
+        $token = $request->hasHeader('authorization')
+            ? $request->header('authorization')
+            : $request->get('token');
+
+
+        if($token)
         {
             $jwt = new Jwt();
 
-            $raw_claims = $jwt->base64Decode($request->header('authorization'));
+            $raw_claims = $jwt->base64Decode($token);
 
             Config::set('claims', $jwt->getClaims($raw_claims));
         }
