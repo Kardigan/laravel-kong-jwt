@@ -49,10 +49,9 @@ class Jwt
 
         foreach($claims as $claim_array)
         {
-
             $claims_array = is_object($claim_array) ? get_object_vars($claim_array) : $claim_array;
 
-            if(is_array($claims)) 
+            if(is_array($claims_array))
             {
                 foreach ($claim_array as $key => $value)
                 {
