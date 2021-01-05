@@ -47,6 +47,11 @@ class Jwt
 
         $data = [];
 
+        if(!is_array($claims) || !is_object($claims))
+        {
+            return $data;
+        }
+
         foreach($claims as $claim_array)
         {
             $claims_array = is_object($claim_array) ? get_object_vars($claim_array) : $claim_array;
