@@ -47,7 +47,7 @@ class Jwt
 
         $data = [];
 
-        if(!is_array($claims) || !is_object($claims))
+        if(!is_array($claims) && !is_object($claims))
         {
             return $data;
         }
